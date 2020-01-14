@@ -1,18 +1,38 @@
 //hacer una funcion que busque por nombre
 
-const baseURL = "https://pokeapi.co/";
+const baseURL = "https://pokeapi.co/api/v2/pokemon/";
 
 const handleError = err =>{
-    alert(`Hubo un error. ${err}`);
+    console.log(`Hubo un error. ${err}`);
 };
 
 let poke;
 
-const pokemon = async (nombre) =>{
+const getPokemon = async (id) =>{
     try {
-        const res = await axios.get(`${baseUrl}${nombre}`);
+        const res = await axios.get(`${baseURL}${id}`);
         poke=res.data;
+        console.log(poke);
+        mostrarPoke();
+    } catch (err){
+        handleError()
+    }
 
-    } catch (handleError);
+}
 
+const botonBuscar = document.querySelector("#buscarId");
+const pokeId = document.querySelector("#pokeId");
+
+botonBuscar.addEventListener("click",()=>{
+  
+    getPokemon(pokeId.value);
+});
+
+const mostrarPoke = () =>{
+    let infoPoke = document.querySelector("#infoPoke");
+    infoPoke.innerHTML=`
+    <p>${poke.name}</p>
+    <p>${poke.types[0].type.name}</p>
+    <img src ='${poke.sprites.front_default}'/>
+    `;
 }
