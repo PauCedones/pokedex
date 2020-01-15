@@ -36,7 +36,7 @@ const mostrarPoke = () =>{
     let infoPoke = document.querySelector("#infoPoke");
     infoPoke.innerHTML=`
     <img src ='${poke.sprites.front_default}'/>
-    <p>${poke.name}</p>
-    <p>${poke.types[0].type.name}</p>
+    <p class="nombrePoke">${poke.name}</p>
+    <p class="tipoPoke">${poke.types[0].type.name}</p>
     `;
 }

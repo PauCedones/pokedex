@@ -1,3 +1,76 @@
 h1{
 font-family: 'Press Start 2P', cursive;
+text-align: center;
+font-size: 50px;
+
+}
+
+body{
+    background-image: url(img/imgpokedex.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% -25%;
+    position: absolute;
+}
+
+.pokeId{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f9ee60;
+    width: 133px;
+    height: 35px;
+    border-radius: 5px;
+    border:0px;
+    position: relative;
+    left: 106%;
+    top: 451px;
+}
+
+.pokeId::placeholder {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buscarId{
+    background-color: #00aaf7;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    border:0px;
+    position: relative;
+    left: 67%;
+    top: 395px;
+}
+
+button:hover{
+    color: currentColor;
+    background: #007fb9;
+    box-shadow: 4px 4px 0 #888;
+}
+button:active {
+    box-shadow: 0 0 0 #888;
+  }
+
+img{
+    width: 50%;
+    position: relative;
+    left: 118%;
+    top: 127px;
+}
+.nombrePoke{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    color: white;
+    position: relative;
+    left: 220%;
+    top: -73px;
+}
+.tipoPoke{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 229%;
+    top: 71px;
 }
